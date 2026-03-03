@@ -1,0 +1,23 @@
+let usuarioCorreto = "admin";
+let senhaCorreta = "1234";
+let tentativas = 0;
+let acessoLiberado = false;
+
+while (tentativas < 3) {
+    let usuario = prompt("Digite o usuário:");
+    let senha = prompt("Digite a senha:");
+
+    if (usuario === usuarioCorreto && senha === senhaCorreta) {
+        acessoLiberado = true;
+        break;
+    } else {
+        tentativas++;
+        alert("Usuário ou senha incorretos! Tentativa " + tentativas + " de 3.");
+    }
+}
+
+if (acessoLiberado) {
+    alert("Login realizado com sucesso!");
+} else {
+    alert("Acesso bloqueado! Você excedeu o número de tentativas.");
+}
